@@ -5,10 +5,11 @@ This is a repo with some examples of C++. There are a few different Hello World 
 
 Directories, listed in approximate order of complexity:
 
-* `dumb-hello` - simplest example, just uses g++.
-* `make-hello` - same hello world example, but with a makefile
-* `cmake-hello` - same hello world example, but with CMake
-* `cmake-docker-hello` - CMake hello world with scripts for running in Docker
-* `evercraft-kata` - Evercraft Kata, a more in depth example. 
+* `basics/dumb-hello` - simplest example, just uses g++.
+* `basics/make-hello` - same hello world example, but with a makefile
+* `basics/cmake-hello` - same hello world example, but with CMake
+* `basics/cmake-docker-hello` - CMake hello world with scripts for running in Docker
+* `basics/cppHello` - copy of RJ's basic C++ repo, see README
 
-Also included in the `cppHello` directory is a copy of a repo from a coworker. It's got a kata from him, a more involved hello world example, and a Dockerfile for running C++ code. I've made some modifications to the Dockerfile, which appear wherever I use Docker in this repo, but it's mostly RJ's original repo, which linked in the README.md for that directory.
+* `evercraft-kata` - Evercraft Kata, a more in depth example. 
+* `graphics/ppm-hello` - from Ray Tracing In One Weekend, writes out a PPM file
