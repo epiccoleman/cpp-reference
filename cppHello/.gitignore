@@ -1,0 +1,16 @@
+.DS_Store
+CMakeCache.txt
+CMakeFiles
+*~
+*.a
+HelloConfig.h
+Makefile
+cmake_install.cmake
+Hello
+*Test
+Testing
+*/Testing
+*.cmake
+GildedRose/GildedRoseTextTests
+GildedRose/GildedRoseUnitTests
+
