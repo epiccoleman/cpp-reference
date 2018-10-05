@@ -1,5 +1,7 @@
-add_library(Character Character.cpp)
-add_executable(CharacterUnitTests CharacterUnitTests.cpp)
-add_test(CharacterUnitTests)
+cmake_minimum_required(VERSION 3.12)
+project(Evercraft)
 
-TARGET_LINK_LIBRARIES(CharacterUnitTests Character gtest pthread)
+add_library(Character Character.cpp)
+add_executable(CharacterTest CharacterTest.cpp)
+TARGET_LINK_LIBRARIES(CharacterTest Character gtest pthread)
+add_test(CharacterTest CharacterTest)
