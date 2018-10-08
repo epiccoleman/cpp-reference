@@ -17,3 +17,15 @@ float Vec3::y(){
 float Vec3::z(){
   return v[2];
 }
+
+float Vec3::r(){
+  return v[0];
+}
+
+float Vec3::g(){
+  return v[1];
+}
+
+float Vec3::b(){
+  return v[2];
+}
