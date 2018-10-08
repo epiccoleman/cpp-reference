@@ -29,3 +29,11 @@ float Vec3::g(){
 float Vec3::b(){
   return v[2];
 }
+
+const Vec3& Vec3::operator+() const {
+  return *this;
+}
+
+Vec3 Vec3::operator-() const {
+  return Vec3(-v[0], -v[1], -v[2]);
+}

@@ -16,11 +16,8 @@ class Vec3 {
     float g();
     float b();
 
-    //TODO - not sure what this is for.
-    inline const Vec3& operator+() const { return *this; }
-    inline Vec3 operator-() const { return Vec3(-v[0], -v[1], -v[2]); }
-
-
+    const Vec3& operator+() const;
+    Vec3 operator-() const;
 };
 
 #endif //VEC3H

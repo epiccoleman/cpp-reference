@@ -52,7 +52,17 @@ TEST(Vec3Test, vectorsCanBeNegated)
   EXPECT_EQ(-1.0, vec3.x());
   EXPECT_EQ(-2.0, vec3.y());
   EXPECT_EQ(-3.0, vec3.z());
-  /* delete vec3; */
+}
+
+TEST(Vec3Test, unaryPlusReturnsTheSameVector)
+{
+  Vec3 vec3 = Vec3(1.0, 2.0, 3.0);
+
+  Vec3 another_vec3 = +vec3;
+
+  EXPECT_EQ(vec3.x(), another_vec3.x());
+  EXPECT_EQ(vec3.y(), another_vec3.y());
+  EXPECT_EQ(vec3.z(), another_vec3.z());
 }
 
 int main(int argc, char* argv[])
