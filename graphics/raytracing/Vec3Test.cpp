@@ -149,6 +149,17 @@ TEST(Vec3Test, canTakeDotProductOfTwoVectors)
   EXPECT_EQ(dot(vec_a, vec_b), 112.0);
 }
 
+TEST(Vec3Test, canTakeCrossProductOfTwoVectors)
+{
+  Vec3 vec_a = Vec3(8.0, 16.0, 24.0);
+  Vec3 vec_b = Vec3(1.0, 2.0, 3.0);
+  Vec3 cross_product = cross(vec_a, vec_b);
+
+  EXPECT_EQ(cross_product[0], 0);
+  EXPECT_EQ(cross_product[1], 0);
+  EXPECT_EQ(cross_product[2], 0);
+}
+
 
 int main(int argc, char* argv[])
 {
