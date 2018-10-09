@@ -40,4 +40,7 @@ Vec3 operator-(const Vec3 &v1, const Vec3 &v2);
 Vec3 operator*(const Vec3 &v1, const Vec3 &v2);
 Vec3 operator/(const Vec3 &v1, const Vec3 &v2);
 
+float dot(const Vec3 &v1, const Vec3 &v2);
+float cross(const Vec3 &v1, const Vec3 &v2);
+
 #endif //VEC3H

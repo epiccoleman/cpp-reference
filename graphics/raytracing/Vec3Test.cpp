@@ -141,6 +141,15 @@ TEST(Vec3Test, vectorsCanBeDividedElementwise)
   EXPECT_EQ(vec_quotient[2], 8.0);
 }
 
+TEST(Vec3Test, canTakeDotProductOfTwoVectors)
+{
+  Vec3 vec_a = Vec3(8.0, 16.0, 24.0);
+  Vec3 vec_b = Vec3(1.0, 2.0, 3.0);
+
+  EXPECT_EQ(dot(vec_a, vec_b), 112.0);
+}
+
+
 int main(int argc, char* argv[])
 {
   ::testing::InitGoogleTest(&argc, argv);
