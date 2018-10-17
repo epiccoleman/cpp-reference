@@ -6,9 +6,8 @@
 #include <iostream>
 
 class Vec3 {
-    float v[3];
-
  public:
+    float v[3];
     Vec3(float x, float y, float z);
     float x();
     float y();
