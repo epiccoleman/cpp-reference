@@ -13,3 +13,4 @@ Directories, listed in approximate order of complexity:
 
 * `evercraft-kata` - Evercraft Kata, a more in depth example. 
 * `graphics/ppm-hello` - from Ray Tracing In One Weekend, writes out a PPM file
+* `graphics/raytracing` - code from Ray Tracing In One Weekend.
