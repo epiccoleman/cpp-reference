@@ -8,6 +8,8 @@
 class Vec3 {
  public:
     float v[3];
+
+    Vec3() {};  // you need the empty constructor if you want to use this as a member elsewhere
     Vec3(float x, float y, float z);
     float x();
     float y();
