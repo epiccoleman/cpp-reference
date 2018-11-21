@@ -130,6 +130,16 @@ TEST(Vec3Test, vectorsCanBeMultipliedElementwise)
   EXPECT_EQ(vec_product[2], 3.0);
 }
 
+TEST(Vec3Test, vectorsCanBeMultipliedByAScalar)
+{
+  Vec3 vec_a = Vec3(1.0, 2.0, 3.0);
+  Vec3 vec_product = vec_a * 42.0;
+
+  EXPECT_EQ(vec_product[0], 42.0);
+  EXPECT_EQ(vec_product[1], 84.0);
+  EXPECT_EQ(vec_product[2], 126.0);
+}
+
 TEST(Vec3Test, vectorsCanBeDividedElementwise)
 {
   Vec3 vec_a = Vec3(8.0, 16.0, 24.0);

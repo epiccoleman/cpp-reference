@@ -75,6 +75,12 @@ Vec3 operator*(const Vec3 &v1, const Vec3 &v2){
               v1[2] * v2[2]);
 }
 
+Vec3 operator*(const Vec3& v1, float t){
+  return Vec3(v1[0] * t,
+              v1[1] * t,
+              v1[2] * t);
+}
+
 Vec3 operator/(const Vec3 &v1, const Vec3 &v2){
   return Vec3(v1[0] / v2[0],
               v1[1] / v2[1],
