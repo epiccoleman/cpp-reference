@@ -140,6 +140,16 @@ TEST(Vec3Test, vectorsCanBeMultipliedByAScalar)
   EXPECT_EQ(vec_product[2], 126.0);
 }
 
+TEST(Vec3Test, vectorsCanBeMultipliedByAScalarInTheOtherOrder)
+{
+  Vec3 vec_a = Vec3(1.0, 2.0, 3.0);
+  Vec3 vec_product = 42.0 * vec_a;
+
+  EXPECT_EQ(vec_product[0], 42.0);
+  EXPECT_EQ(vec_product[1], 84.0);
+  EXPECT_EQ(vec_product[2], 126.0);
+}
+
 TEST(Vec3Test, vectorsCanBeDividedElementwise)
 {
   Vec3 vec_a = Vec3(8.0, 16.0, 24.0);
@@ -149,6 +159,17 @@ TEST(Vec3Test, vectorsCanBeDividedElementwise)
   EXPECT_EQ(vec_quotient[0], 8.0);
   EXPECT_EQ(vec_quotient[1], 8.0);
   EXPECT_EQ(vec_quotient[2], 8.0);
+}
+
+TEST(Vec3Test, vectorsCanBeDividedElementwiseByAScalar)
+{
+  Vec3 vec_a = Vec3(8.0, 16.0, 24.0);
+  float divisor = 4;
+  Vec3 vec_quotient = vec_a / divisor;
+
+  EXPECT_EQ(vec_quotient[0], 2.0);
+  EXPECT_EQ(vec_quotient[1], 4.0);
+  EXPECT_EQ(vec_quotient[2], 6.0);
 }
 
 TEST(Vec3Test, canTakeDotProductOfTwoVectors)
@@ -168,4 +189,12 @@ TEST(Vec3Test, canTakeCrossProductOfTwoVectors)
   EXPECT_EQ(cross_product[0], 0);
   EXPECT_EQ(cross_product[1], 0);
   EXPECT_EQ(cross_product[2], 0);
+}
+
+TEST(Vec3Test, canGetUnitVector)
+{
+  Vec3 vec_a = Vec3(8.0, 16.0, 24.0);
+  Vec3 unit_vec = unit_vector(vec_a);
+
+  EXPECT_NEAR(unit_vec.length(), 1, .00001);
 }

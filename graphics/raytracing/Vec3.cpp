@@ -81,10 +81,20 @@ Vec3 operator*(const Vec3& v1, float t){
               v1[2] * t);
 }
 
+Vec3 operator*(float t, const Vec3& v1){
+  return Vec3(v1[0] * t,
+              v1[1] * t,
+              v1[2] * t);
+}
+
 Vec3 operator/(const Vec3 &v1, const Vec3 &v2){
   return Vec3(v1[0] / v2[0],
               v1[1] / v2[1],
               v1[2] / v2[2]);
+}
+
+Vec3 operator/(Vec3 v, float t) {
+  return Vec3(v[0]/t, v[1]/t, v[2]/t);
 }
 
 float dot(const Vec3 &v1, const Vec3 &v2){
@@ -95,4 +105,8 @@ Vec3 cross(const Vec3 &v1, const Vec3 &v2){
   return Vec3(v1[1] * v2[2] - v1[2] * v2[1],
               v1[2] * v2[0] - v1[0] * v2[2],
               v1[0] * v2[1] - v1[1] * v2[0]);
+}
+
+Vec3 unit_vector(Vec3 v){
+  return v / v.length();
 }

@@ -3,3 +3,5 @@
 cmake .
 make
 ./RaytracerTest
+time ./Raytracer > output.ppm
+
