@@ -14,5 +14,5 @@ Vec3 Ray::direction() const {
 }
 
 Vec3 Ray::point_at_parameter(float t) const {
-  return (A + B * t);
+  return (A + t * B);
 }

@@ -36,6 +36,8 @@ class Vec3 {
     void make_unit_vector();
 };
 
+bool operator==(const Vec3 &v1, const Vec3 &v2);
+bool operator!=(const Vec3 &v1, const Vec3 &v2);
 Vec3 operator+(const Vec3 &v1, const Vec3 &v2);
 Vec3 operator-(const Vec3 &v1, const Vec3 &v2);
 Vec3 operator*(const Vec3 &v1, const Vec3 &v2);

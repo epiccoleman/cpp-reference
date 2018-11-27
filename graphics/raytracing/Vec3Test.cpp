@@ -97,6 +97,20 @@ TEST(Vec3Test, makeUnitVectorProducesAVectorWithLength1)
   EXPECT_NEAR(vec3.length(), 1, .00001);
 }
 
+TEST(Vec3Test, equalityOperatorWorks){
+  Vec3 vec_a = Vec3(1.0, 2.0, 3.0);
+  Vec3 vec_b = Vec3(1.0, 2.0, 3.0);
+
+  EXPECT_EQ(vec_a, vec_b);
+}
+
+TEST(Vec3Test, inequalityOperatorWorks){
+  Vec3 vec_a = Vec3(1.0, 2.0, 3.0);
+  Vec3 vec_b = Vec3(1.0, 3.0, 2.0);
+
+  EXPECT_NE(vec_a, vec_b);
+}
+
 TEST(Vec3Test, vectorsCanBeAddedTogether)
 {
   Vec3 vec_a = Vec3(1.0, 2.0, 3.0);
