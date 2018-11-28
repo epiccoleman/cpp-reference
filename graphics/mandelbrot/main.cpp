@@ -1,13 +1,20 @@
 #include <iostream>
 #include <cmath>
+#include <vector>
 
-int main(){
-  int nx = 20;
-  int ny = 20;
+int main(int argc, char *argv[]){
+  int nx = 1000;
   int max = 1000;
 
-  int img[nx][ny];
+  if(argc > 1){
+    nx = atoi(argv[1]);
+  }
 
+  int ny = nx;
+
+  std::vector<std::vector<int> > img(nx, std::vector<int>(ny));
+
+  int max_iters = 0;
 for (int row = 0; row < ny; row++) {
   for (int col = 0; col < nx; col++) {
     double c_re = (col - nx/2.0)*4.0/nx;
@@ -21,20 +28,22 @@ for (int row = 0; row < ny; row++) {
       iteration++;
     }
     if (iteration < max) {
-      img[row][col] = 0;
+      if (iteration > max_iters) max_iters = iteration;
+      img[row][col] = iteration;
     }
     else {
-      img[row][col] = 1;
+      img[row][col] = 0;
     }
   }
  }
+ std::cerr <<  "max iters: " << max_iters << std::endl;
 
   std::cout << "P3\n" << nx << " " << ny << "\n255\n";
   for(int x = 0; x < nx; x++){
     for(int y = 0; y < ny; y++){
-      int r = (img[x][y] * 255);
-      int g = (img[x][y] * 255);
-      int b = (img[x][y] * 255);
+      int r = 0; // (img[x][y] * 255/100);
+      int g = (img[x][y] * 255/10);
+      int b = 0; //(img[x][y] * 255);
       std::cout << r << " " <<  g << " " << b << "\n";
     }
   }
