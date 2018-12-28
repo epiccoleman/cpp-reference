@@ -24,6 +24,13 @@ RUN cd /tmp && \
   cd cmake-3.13.1 && \
   ./bootstrap && make && make install
 
+# install Boost 1.69
+RUN cd /usr/local/src && \
+  wget --quiet https://dl.bintray.com/boostorg/release/1.69.0/source/boost_1_69_0.tar.gz && \
+  tar -xzf boost_1_69_0.tar.gz && \
+  cd boost_1_69_0 && \
+  ./bootstrap.sh && ./b2 install
+
 # build and install gtest
 RUN cd /usr/src/gtest && \
   cmake CMakeLists.txt && \
